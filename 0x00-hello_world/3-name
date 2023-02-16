@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc hello.c -c cisfun $CFILE
+gcc -c cisfun $CFILE
