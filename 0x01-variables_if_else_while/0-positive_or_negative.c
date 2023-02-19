@@ -18,13 +18,13 @@ int main(void)
 	/* your code goes there */
 	if (n > 0)
 	{
-		printf("%lu is posiitive\n", rand());
+		printf("%d is posiitive\n", n);
 	}
-	if (n < 0)
+	else if (n < 0)
 	{
-		printf("%lu is negative\n", rand());
+		printf("%d is negative\n", n);
 	}
-	if (n == 0)
-		printf("%lu is zero\n", rand());
+	else
+		printf("%d is zero\n", n);
 
 	return (0);									 }
