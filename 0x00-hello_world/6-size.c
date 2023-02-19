@@ -2,8 +2,9 @@
  * main - starting point
  *
  * a program to display sizepf various types
- * Return: 0 return value 
+ * Return: 0 return value
  */
+
 #include <stdio.h>
 
 int main(void)
