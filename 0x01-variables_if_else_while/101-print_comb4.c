@@ -21,6 +21,8 @@ int main(void)
 			{
 				for (z = 48; z < 58; z++)
 				{
+					if (z > y)
+					{
 					putchar(x);
 					putchar(y);
 					putchar(z);
@@ -30,6 +32,7 @@ int main(void)
 					}
 					putchar(',');
 					putchar(' ');
+					}
 				}
 			}
 		}
