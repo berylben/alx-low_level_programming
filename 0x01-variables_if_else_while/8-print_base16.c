@@ -10,7 +10,7 @@
 int main(void)
 {
 	int i;
-	char ch;
+	char ch = 'a';
 
 	for (i = 0; i < 16; i++)
 	{
