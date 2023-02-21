@@ -4,12 +4,16 @@
  * Return: 0 success
  */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 int main(void)
 {
-	printf("_putchar\n");
+	char *c = "_putchar";
 
+	while (*c != '\0')
+	{
+		_putchar(*c);
+	}
+	_putchar('\n');
 	return (0);
 }

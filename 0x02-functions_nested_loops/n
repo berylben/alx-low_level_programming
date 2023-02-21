@@ -1,0 +1,3 @@
+nt putchar (int __c);
+      |                     ~~~~^~~
+
