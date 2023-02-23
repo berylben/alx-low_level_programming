@@ -1,5 +1,5 @@
 /**
- * man -Starting point
+ * print_alphabet - the function prints lowercase letters
  *
  * Return: Always 0 (success)
  */
