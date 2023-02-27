@@ -1,6 +1,6 @@
 /**
  *  _strlen - returns the length of a string
- *  @*s: string input
+ *  @s: string input
  *  Return: Always i return value
  */
 
