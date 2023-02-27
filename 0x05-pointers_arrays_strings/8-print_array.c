@@ -1,0 +1,23 @@
+/**
+ * print_array - prints n elements
+ * @a: integer input
+ * @n: integer input
+ * Return: always 0
+ */
+
+#include "main.h"
+
+void print_array(int *a, int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		printf("%d", a[i]);
+
+		if (i + 1 != n)
+			printf(", ");
+	}
+
+	printf("\n");
+}
