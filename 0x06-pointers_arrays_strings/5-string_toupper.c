@@ -1,5 +1,5 @@
 /**
- * string_topper - changes all lowercase letters of a string
+ * string_toupper - changes all lowercase letters of a string
  *  to uppercase
  *  @str: string input
  *  Return: a pointer to the changes string
