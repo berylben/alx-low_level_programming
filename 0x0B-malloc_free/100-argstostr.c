@@ -1,5 +1,5 @@
 /**
- * argtostr - function that concatenates all the arguments of your program
+ * argstostr - function that concatenates all the arguments of your program
  * @ac: arguments input
  * @av: arguments input
  * Return: NULL if ac == 0 or av == NULL
