@@ -1,3 +1,4 @@
+int change(int cents);
 /**
  * main - Entry point
  * @argc: argumennt input
@@ -5,7 +6,6 @@
  * Return: ALways (0) success
  */
 
-int change(int cents);
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
