@@ -3,7 +3,7 @@
  * at the end of a listint_t list
  * @head: address of the head of the listint_t list
  * @n: integer for a new node to contain
- * Return: the address of the new element, or NULL if it fails
+ * Return: the address of the new element, NULL if it fails
  */
 
 #include "lists.h"
