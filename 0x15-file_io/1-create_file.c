@@ -1,10 +1,8 @@
 /**
- * read_textfile - Reads a text file and prints it to POSIX stdout.
- * @filename: A pointer to the name of the file.
- * @letters: The number of letters the
- *           function should read and print.
- * Return: If the function fails or filename is NULL - 0.
- *         O/w - the actual number of bytes the function can read and print.
+ * create_file - function that creates a file
+ * @filename: name of the file to create
+ * @text_content: string to write to the file
+ * Return: 1 on success, -1 on failure
  */
 
 #include <unistd.h>
@@ -12,30 +10,38 @@
 #include "main.h"
 #include <stdlib.h>
 
-ssize_t read_textfile(const char *filename, size_t letters)
+int create_file(const char *filename, char *text_content)
 {
-ssize_t o, r, w;
-char *buffer;
+int fd, size;
 
-if (filename == NULL)
-return (0);
-
-buffer = malloc(sizeof(char) * letters);
-if (buffer == NULL)
-return (0);
-
-o = open(filename, O_RDONLY);
-r = read(o, buffer, letters);
-w = write(STDOUT_FILENO, buffer, r);
-
-if (o == -1 || r == -1 || w == -1 || w != r)
+if (!filename)
+return (-1);
+fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+if (fd == -1)
+return (-1);
+if (!text_content)
 {
-free(buffer);
-return (0);
+close(fd);
+return (1);
+}
+size = write(fd, text_content, _strlen(text_content));
+close(fd);
+if (size == -1)
+return (-1);
+return (1);
 }
 
-free(buffer);
-close(o);
+/**
+ * _strlen - function that returns the length of a string
+ * @s: string to check
+ *
+ * Return: length of the string
+ */
+int _strlen(char *s)
+{
+int len = 0;
 
-return (w);
+while (s[len])
+len++;
+return (len);
 }
